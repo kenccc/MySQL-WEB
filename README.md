@@ -1,6 +1,7 @@
 # To run
 
     pip install MYSQL-WEB
+    prvniProject
 
 
 # To run tests
