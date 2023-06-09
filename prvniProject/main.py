@@ -94,5 +94,5 @@ def script(path):
 for x in mycursor:
     print(x)
 
-if __name__ == '__main__':
+def main():
     app.run(host="127.0.0.1", debug=True)
