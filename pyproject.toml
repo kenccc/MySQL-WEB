@@ -14,16 +14,17 @@ readme = "README.md"
 packages = [{include = "prvniProject"}]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 mysql-connector-python = "8.0.33"
 SQLAlchemy = "2.0"
 flask = "2.3.2"
 
-[tool.poetry.optional-dependencies]
-pytest = "^4.6"
+[tool.poetry.group.test.dependencies]
+pytest = "7.3.1"
 
 [tool.poetry.scripts]
 prvniProject = 'prvniProject.main:main'
+test = 'scripts:test'
 
 [tool.pytest.ini_options]
 minversion = "6.0"
