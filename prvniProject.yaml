@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prvni-project
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: prvni-project
+  template:
+    metadata:
+      labels:
+        app: prvni-project
+    spec:
+      containers:
+      - name: prvni-project
+        image: prvni_project:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
